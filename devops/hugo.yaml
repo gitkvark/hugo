@@ -1,0 +1,22 @@
+baseURL: https://devopsdemystifie.fr/
+title: DevOps Démystifié
+relativeURLs: true
+languages:
+  fr:
+    languageCode: fr-FR
+    languageName: Français
+defaultContentLanguage: fr
+theme: hugo-theme-relearn
+
+params:
+  themeVariant:
+    - blue
+    - green
+    - relearn-light
+    - relearn-dark
+  disableLandingPageButton: true
+  showVisitedLinks: true
+  collapsibleMenu: false
+  breadcrumbSeparator: ">"
+  disableRootBreadcrumb: true
+  disableTermBreadcrumbs: false
