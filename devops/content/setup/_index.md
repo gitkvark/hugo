@@ -1,12 +1,14 @@
-+++
-categories = ['setup']
-title = 'Setup'
-type = 'chapter'
-weight = 1
+---
+title: Installation de l'infrastructure
+linkTitle: Installation de l'infra
+description: Installation de l'infrastructure
+type: chapter
+weight: 1
 
-[params]
-  menuPre = "<i class='fa-fw far fa-star'></i> "
-+++
+params:
+  menuPre: <i class='fa-fw far fa-star'></i>
+---
+
 
 Comment créer un environnement Kubernetes pour tester des pipelines CI/CD ou résoudre des problèmes persistants ?
 

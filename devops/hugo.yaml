@@ -1,6 +1,9 @@
 baseURL: https://devopsdemystifie.fr/
 title: DevOps Démystifié
-relativeURLs: true
+author:
+  name: Jacint BALINT
+  emailname: contact@devopsdemystifie.fr
+
 languages:
   fr:
     languageCode: fr-FR
@@ -8,15 +11,19 @@ languages:
 defaultContentLanguage: fr
 theme: hugo-theme-relearn
 
+relativeURLs: true
+
+taxonomies:
+  author: authors
+  tag: tags
+  category: categories
+
 params:
   themeVariant:
     - blue
-    - green
-    - relearn-light
-    - relearn-dark
-  disableLandingPageButton: true
-  showVisitedLinks: true
-  collapsibleMenu: false
-  breadcrumbSeparator: ">"
+    - zen-dark
+  collapsibleMenu: true # Watch out for performance issues if the number of pages grow too high
   disableRootBreadcrumb: true
-  disableTermBreadcrumbs: false
+  images:
+    - images/header.png
+  

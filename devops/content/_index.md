@@ -1,7 +1,9 @@
-+++
-title = "DevOps Démystifié"
-type = "home"
-+++
+---
+title: DevOps Démystifié
+type: home
+---
+
+![Article_image](/images/01-office-desktop.png)
 
 Bienvenue sur **DevOps Démystifié** !
 
