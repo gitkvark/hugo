@@ -26,4 +26,7 @@ params:
   disableRootBreadcrumb: true
   images:
     - images/header.png
-  
+
+module:
+  imports:
+  - path: github.com/McShelby/hugo-theme-relearn
