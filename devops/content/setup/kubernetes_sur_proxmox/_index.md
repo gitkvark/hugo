@@ -18,7 +18,7 @@ L'objectif de cet article est de présenter l'automatisation de la création d'u
 
 Vous pouvez utiliser une machine ancienne qui ne vous sert plus, mais si vous n'en avez pas (et c'est mon cas), il est possible de louer un serveur chez OVH. Assurez-vous que la machine dispose d'au moins 32 Go de RAM et d'un SSD pour des performances optimales.
 
-Une fois le serveur était prêt sur OVH, j'ai installé Proxmox à partir du site web de gestion : www.ovh.com/manager. La version 8 est disponible, et j'ai pu configurer la partition (RAID, etc.) avant l'installation.
+Une fois le serveur était prêt sur OVH, j'ai installé Proxmox à partir du site web de gestion : <www.ovh.com/manager>. La version 8 est disponible, et j'ai pu configurer la partition (RAID, etc.) avant l'installation.
 
 J'ai configuré une interface réseau de type `bridge` nommée `vmbr1` pour relier les machines virtuelles éventuelles. J'ai utilisé un CIDR assez large (/16) afin d'avoir suffisamment d’adresses IP disponibles.
 
@@ -84,6 +84,7 @@ Nous aurons besoin d'une clé SSH que OpenTofu utilisera pour se connecter sans 
 
 > [!NOTE]
 > La clé privée doit être importée dans la mémoire de la machine qu'on utilisera pour executer les commandes terraform :
+>
 > ```bash
 > eval $(ssh-agent)
 > ssh-add ~/.ssh/id_ed25519
@@ -471,10 +472,12 @@ Puis `tofu apply` :
 
 > [!NOTE]
 > Si vous rencontrez `Error: creating custom disk: unable to authenticate user "terraform" over SSH to "x.x.x.x:22". Please verify that ssh-agent is correctly loaded with an authorized key via 'ssh-add -L'`, veuillez vérifier que le ssh-agent est correctement chargé avec une clé autorisée via 'ssh-add'.
+>
 > ```bash
 > eval $(ssh-agent)
 > ssh-add -L ~/.ssh/terraform-id_ed25519
 > ```
+>
 > Puis relancez `tofu apply`.
 
 ![Tofu apply 2](03-tofu-apply-2.png)
@@ -529,4 +532,3 @@ rm ~/.kube/kubeconfig-devopsdemystifie
 rm ~/.kube/talosconfig-devopsdemystifie
 tofu destroy
 ```
-
